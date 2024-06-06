@@ -1,0 +1,23 @@
+<script>
+    var nome;
+
+    var time1, time2, gols1, gols2, resultado;
+
+    time1 = prompt("Digite o nome do time", "");
+    gols1 = prompt("Digite quantidade de gols que esse time marcou", "");
+    time2 = prompt("Digite o nome do time adversário", "");
+    gols2 = prompt("Digite quantidade de gols que esse time marcou", "");
+
+    gols1 = parseInt(gols1);
+    gols2 = parseInt(gols2);
+
+    if (gols1 > gols2) {
+        resultado = "Vitória do " + time1;
+    } else if (gols2 > gols1) {
+        resultado = "Vitória do " + time2;
+    } else {
+        resultado = "Empate";
+    }
+    document.write(time1 + " ( " + gols1 + " ) " + " X " + time2 + " ( " + gols2 + " ) " + "</BR>");
+    document.write(resultado);
+</script>

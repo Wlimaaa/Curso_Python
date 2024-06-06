@@ -1,0 +1,21 @@
+<script>
+    var nome;
+
+    var nome, nota1, nota2, media, situacao;
+
+    nome = prompt("Digite seu nome", "");
+    nota1 = prompt("Digite sua nota 1 bimestre", "");
+    nota2 = prompt("Digite sua nota 2 bimestre", "");
+
+    media = ((parseFloat(nota1) + parseFloat(nota2)) / 2);
+
+    if (media <= 6.5) {
+
+        situacao = "Reprovado";
+    } else {
+        situacao = "Aprovado";
+    }
+    document.write(nome + "</BR>");
+    document.write("Média:" + media + "</BR>");
+    document.write(situacao);
+</script>
