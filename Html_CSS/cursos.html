@@ -1,14 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursos</title>
+    <title>Formulário Cursos</title>
 </head>
 
 <body>
-    <a href="index.html">"VOLTAR"</a><br></li>
+    <form action="pessoal.html">
+        <fieldset> <!--* para marcar "quadrado"-->
+            <legend> DADOS PESSOAIS </legend><!--* dar nome ao fieldset-->
+            Nome:<br>
+            <input type="text" placeholder="digite o nome" name="Nome"><br>
+            Sobrenome:<br>
+            <input type="text" placeholder="digite o sobrenome" name="Sobrenome"><br>
+            Idade:<br>
+            <input type="text" name="Sobrenome" value="bbbbbbbb"><br>
+            <input type="submit" value="enviar">
+        </fieldset>
+        <input type="radio" name="op01" value="opcao 1"> Exemplo 1<br>
+        <input type="radio" name="op01" value="opcao 2"> Exemplo 2<br>
+        <input type="radio" name="op01" value="opcao 2" checked> Outros <br>
+
+    </form>
+    <form>
+        <input type="checkbox" name="op01" value="opcao 1"> Exemplo 1<br>
+        <input type="checkbox" name="op01" value="opcao 2"> Exemplo 2<br>
+        <input type="checkbox" name="op01" value="opcao 2" checked> Outros <br> <!--* para marcar defult a opção-->
+
+        <form action="pessoal.html">
+            <select name="Times" multiple><br>
+                <option valeu="1"> </option>
+                <option valeu="1">FLAMENGO</option>
+                <option valeu="1">VASCO</option>
+                <option valeu="1">FLUMINENSE</option>
+                <option valeu="1">BOTAFOGO</option>
+                <option valeu="1">AMÉRICA</option>
+            </select>
+            <input type="submit" value="enviar">
+        </form>
+
+        <textarea rows="10" cols="40">
+            digite aqui...
+        </textarea>
+
+    </form>
 </body>
 
 </html>
