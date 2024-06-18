@@ -8,11 +8,11 @@
 </head>
 
 <body>
-    <form action="pessoal.html"method="postgit">
+    <form action="pessoal.html"method="post">
         <fieldset> <!--* para marcar "quadrado"-->
             <legend> DADOS PESSOAIS </legend><!--* dar nome ao fieldset-->
             Nome:<br>
-            <input type="text" placeholder="digite o nome" name="Nome"><br>
+            <input type="text" placeholder="digite o nome" name="Nome"required><br>
             Sobrenome:<br>
             <input type="text" placeholder="digite o sobrenome" name="Sobrenome"><br>
             Idade:<br>
@@ -39,6 +39,7 @@
                 <option valeu="1">AMÉRICA</option>
             </select>
             <input type="submit" value="enviar">
+            <button type="button">CANCELAR</button>
         </form>
 
         <textarea rows="10" cols="40">
