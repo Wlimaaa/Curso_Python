@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação da tag DIV</title>
+    <script> <!--* função para incorporar no button-->
+        function emitirMensagem() {
+            alert("Oi, sou uma mensagem");
+        }
+    </script>
+ 
+    <h1> Exemplo HTML <span>
+            <font size="10" color="blue">EXEMPLO HTML </font>
+        </span>Pedaço2</h1>
+    <div id="descricao" name="descricao">
+        <p>Exemplo de HTML</p>
+    </div>
+    <button id="botaoAqui" onclick="emitirMensagem();"> Clique aqui!</button><!--* função para incorporar no button-->
+<style> <!--* Css para definir um padrão de estilo para P, h1, h2-->
+    p{
+        color:blue;
+        font-size:50px;
+    }
+    h1, h2{
+        color: red;
+    }
+    #descricao{
+        background-color: yellow;
+    }
+    .exemplo{ /* o ponto é para definir a classe */
+
+        font_size:50px;
+        color:blue;
+    }
+</style>
+</head>
+
+<body style="background-color: gray;">
+
+    <p>Exemplo de HTML</p>
+    <h1>Exemplo de HTML</h1>
+    <h2>Sub Título</h2>
+    <h3 class="exemplo">Outro EXEMPLO</h3><!--* TAG CLASS PARA DEFINIR UM ESTILO PRECISA DECLARAR EM STYLE-->
+    <p style="margin-top:50px; margin-left:50px;text-align-last:100; color: purple;font-size:50px;"> EXEMPLO DE HTML</p>
+    <p style="margin-top:50px; margin-left:50px;text-align-last:100; color: orange;font-size:50px;"> EXEMPLO DE HTML</p>
+</body>
+
+</html>

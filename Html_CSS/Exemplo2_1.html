@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Criar um evento na caixa de texto</title>
+    <script> <!--* função para incorporar no button-->
+        function emitirMensagem() {
+            alert("você digitou algo na caixa de texto")
+        }
+        function emitirAlerta(event) {
+            alert("Tecla digitada " + event.key);
+        }
+    </script>
+    <div id="descricao" name="descricao">
+        <p>Exemplo de HTML</p><!--* tag de texto sem formação-->
+    </div>
+    <input type="text" onkeypress="emitirAlerta(event)" name="exemplo"placeholder="Digite aqui"><!--* função para digitar qualque tecla e sair no alert-->
+    <button id="botaoAqui" onclick="emitirMensagem();"> Clique aqui!</button><br><!--* função para incorporar no button-->
+    <textarea id="exemplo" oninput="emitirMensagem();"rows="10" cols="40"> digite aqui... </textarea>
+</head>
+
+<body>
+
+</body>
+
+</html>
