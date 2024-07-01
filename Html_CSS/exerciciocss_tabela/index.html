@@ -4,59 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botões Agrupados</title>
+    <title>Tabela</title>
     <style>
-        .tr {
-            background-color: #4CAF50;
-            border: 1px solid red;
+        #tabela {
+            font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; 
+            border-collapse:collapse;
+            width:100%;
+        }
+
+        #tabela td,#tabela th{
+
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #tabela tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #tabela tr:hover {
+            background-color: #ddd;
+        }
+
+        #tabela th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #af4c82;
             color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 16px;
-            cursor: pointer;
-            display: block;
-            margin-bottom: 2px;
-            /*<---Alteração*/
         }
 
-        .td {
-            background-color: #3e8e41;
-        }
-
-        nav {
+        div {
             display: flex;
             justify-content: center;
+            with: 30%;
+            height: 30%;
         }
     </style>
 </head>
 
 <body>
-    <nav>
-
-
-        <table border="1">
-        
+    <div>
+        <table id="tabela">
             <tr>
-            <td> NOME</td>
+                <th>NOME</th>
+                <th>IDADE</th>
+                <th>CIDADE</th>
+            </tr>
             <td> Claudio Jose</td>
             <td> 14</td>
             <td> São Paulo </td>
             </tr>
             <tr>
-            <td>IDADE</td>
-            <td> Wanessa</td>
-            <td> 36</td>
-            <td> Rio de Janeiro </td>
+                <td> Wanessa</td>
+                <td> 36</td>
+                <td> Rio de Janeiro </td>
             </tr>
             <tr>
-            <td>CIDADE</td>
-            <td> Rafael</td>
-            <td> 13</td>
-            <td> Bahia</td>
+                <td> Rafael</td>
+                <td> 13</td>
+                <td> Bahia</td>
             </tr>
         </table>
-    </nav>
+    </div>
 </body>
 
 </html>
