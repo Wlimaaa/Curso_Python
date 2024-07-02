@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CADASTRO DE CLIENTES</title>
+    <style>
+        .button {
+            background-color: gray;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            justify-content: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 10%;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        #tabela {
+            font-family: 'Trebuchet MS', 'Times New Roman', Times, serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        #tabela th {
+
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #tabela tr:nth-child(even) {
+            background-color: white;
+        }
+
+        #tabela tr {
+            background-color:gray;
+        
+        }
+
+        #tabela th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: transparent;
+            color: white;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            with: 30%;
+            height: 30%;
+
+
+        }
+
+        .rodape {
+            color: white;
+            font-weight: bold;
+            text-align: left;
+            font-family: 'Times New Roman';
+            bottom: 0;
+
+        }
+
+        nav {
+            display: flex;
+            color: white;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Times New Roman';
+            font-size: 50px;
+
+        }
+    </style>
+</head>
+
+<body style="background-color:black">
+    <nav>
+        <h2> CADASTRO DE CLIENTES </h2>
+    </nav>
+    <nav>
+        <p> LISTA NOVO QUEM SOMOS </p>
+    </nav>
+    <div>
+        <table id="tabela">
+            <tr>
+                <th>NOME</th>
+                <th>BAIRRO</th>
+                <th>TELEFONE</th>
+            </tr>
+            <td> Claudio Jose</td>
+            <td> Engenho da Rainha</td>
+            <td> 21-94464-5676 </td>
+            </tr>
+            <tr>
+                <td> Wanessa</td>
+                <td> Botafogo</td>
+                <td> 21-3123-0759 </td>
+            </tr>
+            <tr>
+                <td> Rafael</td>
+                <td> Flamengo</td>
+                <td> 21-99956-7865</td>
+            </tr>
+            <tr>
+                <td> Geovana</td>
+                <td> Ilha do governador</td>
+                <td> 21-99956-7865</td>
+            </tr>
+            <tr>
+                <td> Marcio</td>
+                <td> Flamengo</td>
+                <td> 21-99956-7865</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <a href="Indexsite.html" button class="button">VOLTAR PAGINA INICIAL</button></a>
+    </div>
+
+
+    <footer>
+
+        <div class="rodape"> Copyright@2024.senac </div>
+
+    </footer>
+</body>
+
+</html>
