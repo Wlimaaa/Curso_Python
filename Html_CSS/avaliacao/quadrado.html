@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadrados de 1 a 20</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        .square-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .square-list li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quadrados dos números de 1 a 20:</h1>
+    <ul class="square-list" id="quadrados-lista"></ul>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var listaQuadrados = document.getElementById('quadrados-lista');
+
+            for (var i = 1; i <= 20; i++) {
+                var quadrado = i * i;
+                var itemLista = document.createElement('li');
+                itemLista.textContent = `O quadrado de ${i} é ${quadrado}`;
+                listaQuadrados.appendChild(itemLista);
+            }
+        });
+    </script>
+
+<button><a href="inicio.html">VOLTAR</a></br></button>
+</body>
+</html>
