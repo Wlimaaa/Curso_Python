@@ -22,6 +22,7 @@ def main():
     
     while True:
         # Opções para o usuário
+        print("MENU")
         print("1 - Adicionar novo contato")
         print("2 - Encerrar e mostrar lista de contatos")
         opcao = input("Escolha uma opção (1/2): ")
