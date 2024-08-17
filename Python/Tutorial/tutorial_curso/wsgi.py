@@ -1,5 +1,5 @@
 """
-WSGI config for controledevisitantes project.
+WSGI config for tutorial_curso project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'controledevisitantes.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tutorial_curso.settings')
 
 application = get_wsgi_application()
