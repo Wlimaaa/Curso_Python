@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Controle Visitantes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            background-color: #343a40;
+            color: #ffffff;
+            height: 100vh;
+            padding: 20px;
+        }
+        .sidebar h5 {
+            color: #ffffff;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .table thead th {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .icon {
+            width: 50px;
+            height: 50px;
+        }
+        footer{
+            background-color: #343a40;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="d-flex">
+    <div class="sidebar col-md-2">
+        <h5>Menu</h5>
+        <button class="btn btn-light btn-block">Visitantes Cadastrados</button>
+        <button class="btn btn-light btn-block">Cadastrar Novo Visitante</button>
+    </div>
+    
+    <div class="col-md-10">
+        <h1>Painel de Controle Visitantes</h1>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">VISITANTES AGUARDANDO AUTORIZAÇÃO</h5>
+                        <img src="imagem_Aguardando.JPG" alt="Aguardando Autorização" class="icon">
+                        <p class="card-text">10</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">VISITANTES NO CONDOMÍNIO</h5>
+                        <img src="imagem_visitantesnocondominio.JPG" alt="Visitantes no Condomínio" class="icon">
+                        <p class="card-text">5</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">VISITAS FINALIZADAS</h5>
+                        <img src="imagem_finalizados.JPG" alt="Visitas Finalizadas" class="icon">
+                        <p class="card-text">15</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">VISITANTES REGISTRADOS NO MÊS ATUAL</h5>
+                        <img src="imagem_registradomes.JPG" alt="Visitantes Registrados" class="icon">
+                        <p class="card-text">20</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h2>VISITANTES RECENTES</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Nome completo</th>
+                        <th scope="col">CPF</th>
+                        <th scope="col">Horário de chegada</th>
+                        <th scope="col">Horário de autorização</th>
+                        <th scope="col">Autorizado por</th>
+                        <th scope="col">Mais informações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Maria da Silva</td>
+                        <td>123.456.789-00</td>
+                        <td>08:30</td>
+                        <td>09:00</td>
+                        <td>João Pereira</td>
+                        <td><button class="btn btn-info btn-sm">Detalhes</button></td>
+                    </tr>
+                    <tr>
+                        <td>José da Costa</td>
+                        <td>987.654.321-00</td>
+                        <td>09:00</td>
+                        <td>09:30</td>
+                        <td>Maria Oliveira</td>
+                        <td><button class="btn btn-info btn-sm">Detalhes</button></td>
+                    </tr>
+                    <tr>
+                        <td>Ana Souza</td>
+                        <td>321.654.987-00</td>
+                        <td>10:00</td>
+                        <td>10:30</td>
+                        <td>Lucas Martins</td>
+                        <td><button class="btn btn-info btn-sm">Detalhes</button></td>
+                    </tr>
+                    <tr>
+                        <td>Pablo Santos</td>
+                        <td>654.321.098-00</td>
+                        <td>11:00</td>
+                        <td>11:30</td>
+                        <td>Fernanda Lima</td>
+                        <td><button class="btn btn-info btn-sm">Detalhes</button></td>
+                    </tr>
+                    <tr>
+                        <td>Roberta Almeida</td>
+                        <td>456.789.123-00</td>
+                        <td>12:00</td>
+                        <td>12:30</td>
+                        <td>Alberto Souza</td>
+                        <td><button class="btn btn-info btn-sm">Detalhes</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <footer>
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Wlima_Dashboord@ Senac curso Python</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
