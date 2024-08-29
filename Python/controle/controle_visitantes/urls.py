@@ -1,25 +1,16 @@
-"""controle_visitantes URL Configuration
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+Para registrar a nova pagina de cadastro registrar_visitante com nome no path nome da pagina, 
+chamar função que foi registrada na views, name é sempre o mesmo criado na função.
 """
 from django.contrib import admin
 from django.urls import path
-from usuarios.views import index
+from dashboard.views import index
 from visitantes.views import registrar_visitante
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name="usuarios"),
+    path('', index, name="index"),
     path('registrar-visitante/', registrar_visitante, name="registrar_visitante"),
 ]

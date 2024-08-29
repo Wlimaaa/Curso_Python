@@ -1,7 +1,29 @@
-
-from django.shortcuts import render
+"""
+Para registrar a nova pagina de cadastro registrar_visitante , context é criada para integra o python com o html
+"""
+from django.shortcuts import render, redirect
+from visitantes.forms import VisitanteForm
+from porteiros.models import Porteiro
+from django.contrib import messages
 
 def registrar_visitante(request):
-    context = {}
-    
+    form = VisitanteForm()
+    if request.method=="POST":
+        form=VisitanteForm(request.POST)
+        
+        if form.is_valid():
+            visitante = form.save(commit=False)
+            visitante.registrado_por = Porteiro.objects.get(id=1)
+            visitante.save()
+            
+            messages.success(
+                request,
+                "O Visitante foi registrado com sucesso!"
+            )
+            return redirect ("index")
+            
+    context = {
+        "nome_pagina":"Registrar visitante",
+        "form": form
+    }
     return render(request, "Telacadastrovisitantes.html", context)

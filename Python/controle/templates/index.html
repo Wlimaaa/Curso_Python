@@ -9,15 +9,22 @@
     <style>
         body {
             background-color: #f8f9fa;
+            margin:0;
+            overflow-y: auto;
         }
         .sidebar {
-            background-color: #343a40;
-            color: #ffffff;
-            height: 100vh;
-            padding: 20px;
+            width: 10cm;
+            background-color: black;
+            color: white;
+            padding: 30px;
         }
-        .sidebar h5 {
-            color: #ffffff;
+        .content {
+            padding: 20px;
+            flex: 1;
+        }
+        .btn-white {
+            background-color: white;
+            color: black;
         }
         .card {
             margin-bottom: 20px;
@@ -33,6 +40,19 @@
         footer{
             background-color: #343a40;
             color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;   
+        }
+        .mt-5{
+            width: auto; /* Largura da div */
+            height: 600px; /* Altura da div */
+            overflow-y: auto; /* Adiciona barra de rolagem vertical */
+            border: 1px solid #ccc; /* Borda para visualização */
+            padding: 10px; /* Espaçamento interno */
         }
     </style>
 </head>
@@ -40,13 +60,21 @@
 
 <div class="d-flex">
     <div class="sidebar col-md-2">
-        <h5>Menu</h5>
+        <h3>Menu</h3>
         <button class="btn btn-light btn-block">Visitantes Cadastrados</button>
         <button class="btn btn-light btn-block">Cadastrar Novo Visitante</button>
     </div>
-    
+
     <div class="col-md-10">
         <h1>Painel de Controle Visitantes</h1>
+    {% if messages %}
+        {% for mensagem in messages %}
+             <div class="alert alert-success" role="alert">
+                 {{mensagem}}
+             
+             </div>
+        {% endfor %}
+     {% endif %}
         <div class="row">
             <div class="col-md-3">
                 <div class="card text-center">
@@ -116,14 +144,14 @@
                     {% endfor %}
                 </tbody>
             </table>
-            <footer>
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Wlima_Dashboord@ Senac curso Python</span>
-                    </div>
-                </div>
-            </footer>
         </div>
+        <footer>
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Wlima_Dashboord@ Senac curso Python</span>
+                </div>
+            </div>
+        </footer>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
