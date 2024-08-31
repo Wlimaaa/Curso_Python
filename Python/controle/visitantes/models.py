@@ -58,6 +58,10 @@ class Visitante(models.Model):
         max_length = 50,
         blank = True,
     )
+    def get_horario_saida(self):
+        if self.horario_saida:
+            return self.horario_saida
+        return "Horário de saída não registrado"
     
     class Meta:
         verbose_name = "Visitante"

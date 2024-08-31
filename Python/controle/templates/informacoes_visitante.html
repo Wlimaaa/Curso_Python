@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Visitantes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+        }
+        .sidebar {
+            width: 10cm;
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+        .content {
+            padding: 20px;
+            flex: 1;
+        }
+        .btn-white {
+            background-color: white;
+            color: black;
+        }
+        footer{
+            background-color: #343a40;
+            color: #ffffff;
+            }
+        </style>
+</head>
+{% load widget_tweaks %}
+<body>
+
+    <div class="sidebar">
+        <h3>Menu</h3>
+        <button class="btn btn-white btn-block mb-2" onclick="window.location.href='#'">Voltar para a Tela Principal</button>
+        <button class="btn btn-white btn-block mb-2" onclick="window.location.href='#'">Consulta Histórico Recente de Visitantes</button>
+        <button class="btn btn-white btn-block" onclick="window.location.href='#'">Editar Cadastro de Visitantes</button>
+    </div>
+
+    <div class="content">
+        <h2>Informações gerais</h2>
+        <form>
+            <div class="form-group">
+                <label for="nomeCompleto">Nome Completo</label>
+                <input type="text" class="form-control" valeu= "{{visitante.nome_completo}}" id="nomeCompleto" disabled>
+            </div>
+            <div class="form-group">
+                <label for="cpf">CPF</label>
+                <input type="text" class="form-control" valeu= "{{visitante.cpf}}" id="cpf" disabled>
+            </div>
+            <div class="form-group">
+                <label for="dataNascimento">Data de Nascimento</label>
+                <input type="date" class="form-control" valeu= "{{visitante.data_nascimento}}" id="dataNascimento" disabled>
+            </div>
+            <div class="form-group">
+                <label for="numeroCasa">Número da Casa</label>
+                <input type="text" class="form-control" valeu= "{{visitante.numero_da_casa}}" id="numeroCasa" disabled>
+            </div>
+            <div class="form-group">
+                <label for="placaVeiculo">Placa do Veículo</label>
+                <input type="text" class="form-control" valeu= "{{visitante.placa_veiculo}}"  id="placaVeiculo" disabled>
+            </div>
+            <div class="form-group">
+                <label for="horarioSaida">Horário de Saída</label>
+                <input type="time" class="form-control" valeu= "{{visitante.get_horario_saida}}" id="horarioSaida" disabled>
+            </div>
+            <div class="form-group">
+                <label for="horarioChegada">Horário de Chegada</label>
+                <input type="time" class="form-control" valeu= "{{visitante.horario_chegada}}" id="horarioChegada" disabled>
+            </div>
+            <div class="form-group">
+                <label for="horarioAutorizacao">Horário de Autorização para Entrada</label>
+                <input type="time" class="form-control" valeu= "{{visitante.registrado_por}}" id="horarioAutorizacao" disabled>
+            </div>
+            <div class="form-group">
+                <label for="moradorAutorizador">Nome do Morador Autorizador</label>
+                <input type="text" class="form-control" valeu= "{{visitante.horario_autorizacao}}" id="moradorAutorizador" disabled>
+            </div>
+            <div class="form-group">
+                <label for="porteiroAutorizou">Porteiro que Autorizou a Entrada</label>
+                <input type="text" class="form-control" valeu= "{{visitante.registrado_por}}" id="porteiroAutorizou" disabled>
+            </div>
+            <div class="mr-1 text-right">
+                <small>
+                    Registrado em 15/08/2024 por {{visitante.registrado_por}}
+                </small>
+
+
+            </div>
+        </form>
+        <footer>
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Wlima_Dashboord@ Senac curso Python</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -61,8 +61,8 @@
 <div class="d-flex">
     <div class="sidebar col-md-2">
         <h3>Menu</h3>
-        <button class="btn btn-light btn-block">Visitantes Cadastrados</button>
-        <button class="btn btn-light btn-block">Cadastrar Novo Visitante</button>
+        <a href="{ % url 'registrar-visitante' %}" class="btn btn-light btn-block">
+        <span class="text">Registrar visitante</span>
     </div>
 
     <div class="col-md-10">
@@ -136,7 +136,7 @@
                         <td>{{visitante.horario_autorizacao}}</td>
                         <td>{{visitante.morador_responsavel}}</td>
                         <td>
-                            <a href="#">
+                            <a href="{% url 'informacoes_visitante' id=visitante.id %}">
                                 Ver informações
                             </a>
                         </td>
